@@ -56,7 +56,6 @@ class FirstFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.openResult.setOnClickListener {
-           // val action = SecondFragmentDirections.actionSecondFragmentToFirstFragment("0_0")
             val action = FirstFragmentDirections.actionFirstFragmentToSecondFragment(calculator.result.toString())
             findNavController().navigate(action)
         }
